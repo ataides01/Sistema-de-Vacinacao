@@ -1,0 +1,55 @@
+<div class="layout-container" [class.sidebar-collapsed]="sidebarCollapsed">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <span class="sidebar-title">Gestão Vacinas</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a *ngFor="let item of menuItems" 
+         [routerLink]="item.route" 
+         routerLinkActive="active"
+         class="nav-item">
+        <span class="nav-icon material-icons">{{ item.icon }}</span>
+        <span class="nav-label">{{ item.label }}</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="btn-logout" (click)="logout()">
+        <span class="material-icons">logout</span>
+        <span>Sair</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="header">
+      <button class="btn-toggle-sidebar" (click)="toggleSidebar()">
+        <span class="material-icons">menu</span>
+      </button>
+
+      <div class="header-right">
+        <div class="user-info">
+          <div class="user-avatar">
+            {{ currentUser?.nome?.charAt(0) || 'U' }}
+          </div>
+          <div class="user-details">
+            <div class="user-name">{{ currentUser?.nome }}</div>
+            <div class="user-role">{{ getPerfilLabel() }}</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

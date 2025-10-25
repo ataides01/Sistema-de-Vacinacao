@@ -1,0 +1,95 @@
+@import '../../../styles.scss';
+@import '../enfermeiro/enfermeiro-dashboard.component.scss';
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.info-group {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #374151;
+
+    strong {
+      color: #1f2937;
+    }
+  }
+}
+
+.btn-action {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.btn-approve {
+    background: #dbeafe;
+    color: #1e40af;
+
+    &:hover {
+      background: #bfdbfe;
+    }
+  }
+}
+
+.btn-success {
+  background: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3);
+  }
+}
+
+.status-disponivel {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-vencido {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-esgotado {
+  background: #e5e7eb;
+  color: #374151;
+}

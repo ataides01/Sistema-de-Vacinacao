@@ -1,0 +1,172 @@
+<div class="dashboard">
+  <div class="page-header">
+    <h1>Dashboard - Enfermeiro</h1>
+    <button class="btn-primary" (click)="abrirModalSolicitar()">
+      <span class="material-icons">add</span>
+      Solicitar Vacinas
+    </button>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card stat-card">
+      <div class="stat-icon purple">
+        <span class="material-icons">vaccines</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Solicitações Totais</div>
+        <div class="stat-value">{{ solicitacoes.length }}</div>
+      </div>
+    </div>
+
+    <div class="card stat-card">
+      <div class="stat-icon green">
+        <span class="material-icons">check_circle</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Aprovadas</div>
+        <div class="stat-value">{{ (solicitacoes | filter:'status':'aprovada').length }}</div>
+      </div>
+    </div>
+
+    <div class="card stat-card">
+      <div class="stat-icon orange">
+        <span class="material-icons">pending</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Pendentes</div>
+        <div class="stat-value">{{ (solicitacoes | filter:'status':'pendente').length }}</div>
+      </div>
+    </div>
+
+    <div class="card stat-card">
+      <div class="stat-icon blue">
+        <span class="material-icons">local_hospital</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Vacinas Disponíveis</div>
+        <div class="stat-value">{{ vacinas.length }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    <div class="card">
+      <div class="card-header">
+        <h2>Minhas Solicitações Recentes</h2>
+      </div>
+      <div class="table-container">
+        <table *ngIf="solicitacoes.length > 0; else semSolicitacoes">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Vacina</th>
+              <th>Quantidade</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let sol of solicitacoes">
+              <td>{{ sol.dataSolicitacao | date:'dd/MM/yyyy' }}</td>
+              <td>{{ sol.vacinaNome }}</td>
+              <td>{{ sol.quantidade }}</td>
+              <td>
+                <span class="status-badge" [ngClass]="getStatusClass(sol.status)">
+                  {{ getStatusLabel(sol.status) }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ng-template #semSolicitacoes>
+          <div class="empty-state">
+            <span class="material-icons">inbox</span>
+            <p>Nenhuma solicitação encontrada</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>Movimentações Recentes</h2>
+      </div>
+      <div class="table-container">
+        <table *ngIf="movimentacoes.length > 0; else semMovimentacoes">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Vacina</th>
+              <th>Tipo</th>
+              <th>Quantidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mov of movimentacoes">
+              <td>{{ mov.data | date:'dd/MM/yyyy' }}</td>
+              <td>{{ mov.vacinaNome }}</td>
+              <td>
+                <span class="badge" [class.badge-entrada]="mov.tipo === 'entrada'" [class.badge-saida]="mov.tipo === 'saida'">
+                  {{ mov.tipo === 'entrada' ? 'Entrada' : 'Saída' }}
+                </span>
+              </td>
+              <td>{{ mov.quantidade }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <ng-template #semMovimentacoes>
+          <div class="empty-state">
+            <span class="material-icons">inbox</span>
+            <p>Nenhuma movimentação encontrada</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="showSolicitarModal">
+  <div class="modal-overlay" (click)="fecharModalSolicitar()"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Solicitar Vacinas</h2>
+      <button class="btn-close" (click)="fecharModalSolicitar()">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+    
+    <div class="modal-body">
+      <div *ngIf="mensagemSucesso" class="alert-success">
+        {{ mensagemSucesso }}
+      </div>
+
+      <form (ngSubmit)="enviarSolicitacao()">
+        <div class="form-group">
+          <label>Vacina</label>
+          <select [(ngModel)]="novaSolicitacao.vacinaId" name="vacina" required>
+            <option value="0">Selecione uma vacina</option>
+            <option *ngFor="let vac of vacinas" [value]="vac.id">{{ vac.nome }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Quantidade</label>
+          <input type="number" [(ngModel)]="novaSolicitacao.quantidade" name="quantidade" min="1" required />
+        </div>
+
+        <div class="form-group">
+          <label>Justificativa</label>
+          <textarea [(ngModel)]="novaSolicitacao.justificativa" name="justificativa" rows="4" required></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" (click)="fecharModalSolicitar()" [disabled]="loading">
+            Cancelar
+          </button>
+          <button type="submit" class="btn-primary" [disabled]="loading">
+            {{ loading ? 'Enviando...' : 'Enviar Solicitação' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,198 @@
+<div class="dashboard">
+  <div class="page-header">
+    <h1>Dashboard - Farmacêutico</h1>
+    <button class="btn-primary" (click)="abrirModalLote()">
+      <span class="material-icons">add</span>
+      Adicionar Lote
+    </button>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card stat-card">
+      <div class="stat-icon orange">
+        <span class="material-icons">pending_actions</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Solicitações Pendentes</div>
+        <div class="stat-value">{{ solicitacoesPendentes.length }}</div>
+      </div>
+    </div>
+
+    <div class="card stat-card">
+      <div class="stat-icon blue">
+        <span class="material-icons">inventory_2</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Lotes Registrados</div>
+        <div class="stat-value">{{ lotes.length }}</div>
+      </div>
+    </div>
+
+    <div class="card stat-card">
+      <div class="stat-icon green">
+        <span class="material-icons">check_circle</span>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Vacinas em Estoque</div>
+        <div class="stat-value">{{ estoque.length }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    <div class="card">
+      <div class="card-header">
+        <h2>Solicitações Pendentes de Aprovação</h2>
+      </div>
+      <div class="table-container">
+        <table *ngIf="solicitacoesPendentes.length > 0; else semSolicitacoes">
+          <thead>
+            <tr>
+              <th>Solicitante</th>
+              <th>Vacina</th>
+              <th>Quantidade</th>
+              <th>Data</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let sol of solicitacoesPendentes">
+              <td>{{ sol.solicitanteNome }}</td>
+              <td>{{ sol.vacinaNome }}</td>
+              <td>{{ sol.quantidade }}</td>
+              <td>{{ sol.dataSolicitacao | date:'dd/MM/yyyy' }}</td>
+              <td>
+                <button class="btn-action btn-approve" (click)="abrirModalAprovar(sol)">
+                  Avaliar
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ng-template #semSolicitacoes>
+          <div class="empty-state">
+            <span class="material-icons">inbox</span>
+            <p>Nenhuma solicitação pendente</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>Lotes Recentes</h2>
+      </div>
+      <div class="table-container">
+        <table *ngIf="lotes.length > 0; else semLotes">
+          <thead>
+            <tr>
+              <th>Lote</th>
+              <th>Vacina</th>
+              <th>Quantidade</th>
+              <th>Validade</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let lote of lotes">
+              <td>{{ lote.numeroLote }}</td>
+              <td>{{ lote.vacinaNome }}</td>
+              <td>{{ lote.quantidadeAtual }}/{{ lote.quantidadeInicial }}</td>
+              <td>{{ lote.dataValidade | date:'dd/MM/yyyy' }}</td>
+              <td>
+                <span class="status-badge" [ngClass]="getStatusLoteClass(lote.status)">
+                  {{ lote.status }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ng-template #semLotes>
+          <div class="empty-state">
+            <span class="material-icons">inbox</span>
+            <p>Nenhum lote registrado</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="showAprovarModal">
+  <div class="modal-overlay" (click)="showAprovarModal = false"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Avaliar Solicitação</h2>
+      <button class="btn-close" (click)="showAprovarModal = false">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="info-group" *ngIf="solicitacaoSelecionada">
+        <p><strong>Solicitante:</strong> {{ solicitacaoSelecionada.solicitanteNome }}</p>
+        <p><strong>Vacina:</strong> {{ solicitacaoSelecionada.vacinaNome }}</p>
+        <p><strong>Quantidade:</strong> {{ solicitacaoSelecionada.quantidade }}</p>
+        <p><strong>Justificativa:</strong> {{ solicitacaoSelecionada.justificativa }}</p>
+      </div>
+      
+      <div class="form-group">
+        <label>Observação</label>
+        <textarea [(ngModel)]="observacao" rows="3" placeholder="Adicione uma observação (opcional para aprovação, obrigatório para rejeição)"></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-danger" (click)="rejeitarSolicitacao()">Rejeitar</button>
+        <button class="btn-success" (click)="aprovarSolicitacao()">Aprovar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="showLoteModal">
+  <div class="modal-overlay" (click)="showLoteModal = false"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Adicionar Novo Lote</h2>
+      <button class="btn-close" (click)="showLoteModal = false">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form (ngSubmit)="adicionarLote()">
+        <div class="form-group">
+          <label>Vacina</label>
+          <select [(ngModel)]="novoLote.vacinaId" name="vacina" required>
+            <option value="0">Selecione uma vacina</option>
+            <option *ngFor="let vac of vacinas" [value]="vac.id">{{ vac.nome }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Número do Lote</label>
+          <input type="text" [(ngModel)]="novoLote.numeroLote" name="numeroLote" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Data Fabricação</label>
+            <input type="date" [(ngModel)]="novoLote.dataFabricacao" name="dataFabricacao" required />
+          </div>
+          <div class="form-group">
+            <label>Data Validade</label>
+            <input type="date" [(ngModel)]="novoLote.dataValidade" name="dataValidade" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Quantidade</label>
+          <input type="number" [(ngModel)]="novoLote.quantidadeInicial" name="quantidade" min="1" required />
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" (click)="showLoteModal = false">Cancelar</button>
+          <button type="submit" class="btn-primary">Adicionar Lote</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
