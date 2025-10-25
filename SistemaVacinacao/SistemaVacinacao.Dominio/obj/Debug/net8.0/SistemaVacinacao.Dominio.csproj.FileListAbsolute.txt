@@ -1,0 +1,11 @@
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\bin\Debug\net8.0\SistemaVacinacao.Dominio.deps.json
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\bin\Debug\net8.0\SistemaVacinacao.Dominio.dll
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\bin\Debug\net8.0\SistemaVacinacao.Dominio.pdb
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\SistemaVacinacao.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\SistemaVacinacao.Dominio.AssemblyInfoInputs.cache
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\SistemaVacinacao.Dominio.AssemblyInfo.cs
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\SistemaVacinacao.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\SistemaVacinacao.Dominio.dll
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\refint\SistemaVacinacao.Dominio.dll
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\SistemaVacinacao.Dominio.pdb
+C:\Users\ooooi\OneDrive\Área de Trabalho\Sistema de Suporte\SuporteTecnico\SistemaVacinacao\SistemaVacinacao.Dominio\obj\Debug\net8.0\ref\SistemaVacinacao.Dominio.dll

@@ -1,0 +1,6 @@
+@SistemaVacinacao.WebApi_HostAddress = http://localhost:5214
+
+GET {{SistemaVacinacao.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

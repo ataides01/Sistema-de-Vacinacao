@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "SistemaVacinacao.Dominio/1.0.0": {
+        "runtime": {
+          "SistemaVacinacao.Dominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SistemaVacinacao.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

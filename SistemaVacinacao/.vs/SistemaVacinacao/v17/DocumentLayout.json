@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.servico\\usuarioservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|solutionrelative:sistemavacinacao.servico\\usuarioservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|solutionrelative:sistemavacinacao.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|solutionrelative:sistemavacinacao.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.webapi\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|solutionrelative:sistemavacinacao.webapi\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.webapi\\controllers\\solicitacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|solutionrelative:sistemavacinacao.webapi\\controllers\\solicitacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.webapi\\controllers\\vacinacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|solutionrelative:sistemavacinacao.webapi\\controllers\\vacinacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.webapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{933B0178-3F84-4C50-9D9D-35E54FBA14B7}|SistemaVacinacao.WebApi\\SistemaVacinacao.WebApi.csproj|solutionrelative:sistemavacinacao.webapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.servico\\relatorioservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|solutionrelative:sistemavacinacao.servico\\relatorioservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.servico\\solicitacaoservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|solutionrelative:sistemavacinacao.servico\\solicitacaoservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.servico\\vacinaservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6965F817-B194-4520-BD57-AD7EB2DE797E}|SistemaVacinacao.Servico\\SistemaVacinacao.Servico.csproj|solutionrelative:sistemavacinacao.servico\\vacinaservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A883484E-90F5-42DB-A28E-40DA2A142C03}|SistemaVacinacao.Repositorio\\SistemaVacinacao.Repositorio.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.repositorio\\repositoriobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A883484E-90F5-42DB-A28E-40DA2A142C03}|SistemaVacinacao.Repositorio\\SistemaVacinacao.Repositorio.csproj|solutionrelative:sistemavacinacao.repositorio\\repositoriobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A883484E-90F5-42DB-A28E-40DA2A142C03}|SistemaVacinacao.Repositorio\\SistemaVacinacao.Repositorio.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.repositorio\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A883484E-90F5-42DB-A28E-40DA2A142C03}|SistemaVacinacao.Repositorio\\SistemaVacinacao.Repositorio.csproj|solutionrelative:sistemavacinacao.repositorio\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.dominio\\relatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|solutionrelative:sistemavacinacao.dominio\\relatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.dominio\\solicitacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|solutionrelative:sistemavacinacao.dominio\\solicitacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.dominio\\vacina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|solutionrelative:sistemavacinacao.dominio\\vacina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|c:\\users\\ooooi\\onedrive\\\u00E1rea de trabalho\\sistema de suporte\\suportetecnico\\sistemavacinacao\\sistemavacinacao.dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65907533-F0D8-45CE-BFC0-FEA257FFDC76}|SistemaVacinacao.Dominio\\SistemaVacinacao.Dominio.csproj|solutionrelative:sistemavacinacao.dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VacinaController.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\VacinaController.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.WebApi\\Controllers\\VacinaController.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\VacinaController.cs",
+              "RelativeToolTip": "SistemaVacinacao.WebApi\\Controllers\\VacinaController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:27:08.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.WebApi\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "SistemaVacinacao.WebApi\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:19:36.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Program.cs",
+              "RelativeToolTip": "SistemaVacinacao.WebApi\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:18:02.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RelatorioServico.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\RelatorioServico.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Servico\\RelatorioServico.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\RelatorioServico.cs",
+              "RelativeToolTip": "SistemaVacinacao.Servico\\RelatorioServico.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:17:41.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SolicitacaoServico.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\SolicitacaoServico.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Servico\\SolicitacaoServico.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\SolicitacaoServico.cs",
+              "RelativeToolTip": "SistemaVacinacao.Servico\\SolicitacaoServico.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:17:17.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VacinaServico.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\VacinaServico.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Servico\\VacinaServico.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\VacinaServico.cs",
+              "RelativeToolTip": "SistemaVacinacao.Servico\\VacinaServico.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:16:51.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioServico.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\UsuarioServico.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Servico\\UsuarioServico.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Servico\\UsuarioServico.cs",
+              "RelativeToolTip": "SistemaVacinacao.Servico\\UsuarioServico.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAArwCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:15:32.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SolicitacaoController.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\SolicitacaoController.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.WebApi\\Controllers\\SolicitacaoController.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\SolicitacaoController.cs",
+              "RelativeToolTip": "SistemaVacinacao.WebApi\\Controllers\\SolicitacaoController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:28:16.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RelatorioController.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\RelatorioController.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.WebApi\\Controllers\\RelatorioController.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\RelatorioController.cs",
+              "RelativeToolTip": "SistemaVacinacao.WebApi\\Controllers\\RelatorioController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:29:04.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.WebApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.WebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SistemaVacinacao.WebApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wBUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:29:42.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RepositorioBase.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Repositorio\\RepositorioBase.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Repositorio\\RepositorioBase.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Repositorio\\RepositorioBase.cs",
+              "RelativeToolTip": "SistemaVacinacao.Repositorio\\RepositorioBase.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwCgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:15:01.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Repositorio\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Repositorio\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Repositorio\\AppDbContext.cs",
+              "RelativeToolTip": "SistemaVacinacao.Repositorio\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:14:36.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Relatorio.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Relatorio.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Dominio\\Relatorio.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Relatorio.cs",
+              "RelativeToolTip": "SistemaVacinacao.Dominio\\Relatorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:12:56.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Solicitacao.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Solicitacao.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Dominio\\Solicitacao.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Solicitacao.cs",
+              "RelativeToolTip": "SistemaVacinacao.Dominio\\Solicitacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:12:20.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Vacina.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Vacina.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Dominio\\Vacina.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Vacina.cs",
+              "RelativeToolTip": "SistemaVacinacao.Dominio\\Vacina.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:11:55.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Usuario.cs",
+              "RelativeDocumentMoniker": "SistemaVacinacao.Dominio\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ooooi\\OneDrive\\\u00C1rea de Trabalho\\Sistema de Suporte\\SuporteTecnico\\SistemaVacinacao\\SistemaVacinacao.Dominio\\Usuario.cs",
+              "RelativeToolTip": "SistemaVacinacao.Dominio\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:08:21.496Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
