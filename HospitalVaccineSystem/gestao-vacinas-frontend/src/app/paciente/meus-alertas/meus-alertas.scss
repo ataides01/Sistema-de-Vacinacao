@@ -1,0 +1,28 @@
+.feature-content {
+  padding: 1rem;
+}
+
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.alert-card {
+  &.aviso {
+    border-left: 5px solid #ffc107; 
+    .mat-icon { color: #ffc107; }
+  }
+  &.campanha {
+    border-left: 5px solid #03a9f4; 
+    .mat-icon { color: #03a9f4; }
+  }
+  &.info {
+    border-left: 5px solid #4caf50; 
+    .mat-icon { color: #4caf50; }
+  }
+
+  .mat-icon[mat-card-avatar] {
+    font-size: 40px;
+  }
+}

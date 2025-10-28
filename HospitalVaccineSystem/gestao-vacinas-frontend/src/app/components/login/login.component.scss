@@ -1,145 +1,168 @@
-.login-container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px;
+/* src/app/components/login/login.scss 
+  Paleta de cores baseada na logo (Azul-petróleo e Verde-menta)
+*/
+
+/* 1. Definição das Cores da Logo */
+:host {
+  --cor-escura-logo: #1a3b4f;  // Azul-petróleo bem escuro da logo
+  --cor-clara-logo: #33cca6;   // Verde-menta vibrante da logo
+  
+  // Cores de apoio
+  --cor-fundo-card: #ffffff;
+  --cor-texto-claro: #f4f4f4;
+  --cor-texto-escuro: #333;
+  --cor-texto-secundario: #777;
 }
 
+/* 2. Fundo da Página (Substituindo o gradiente roxo) */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* CORREÇÃO: Trocamos 'height' por 'min-height'.
+    Isso garante que o fundo ocupe PELO MENOS 100% da tela,
+    mas permite que ele cresça (e crie uma barra de rolagem)
+    se o card de login for muito comprido.
+  */
+  min-height: 100vh; 
+  
+  padding: 2rem 1rem; // Adiciona um respiro em cima e embaixo
+  box-sizing: border-box; // Garante que o padding não quebre o layout
+  background: linear-gradient(135deg, var(--cor-escura-logo), var(--cor-clara-logo));
+}
+
+/* 3. Card de Login */
 .login-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 450px;
-  padding: 40px;
+  padding: 2.5rem;
+  background: var(--cor-fundo-card);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
+/* 4. Cabeçalho e Logo (Código que já corrigimos) */
 .login-header {
+  margin-bottom: 2rem;
   text-align: center;
-  margin-bottom: 30px;
 
-  .logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 50px;
-      height: 50px;
-      color: white;
-    }
+  .logo-imagem {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
   }
 
   h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #2d3748;
-    margin: 0 0 8px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    
+    // === A MUDANÇA ESTÁ AQUI ===
+    color: var(--cor-escura-logo); // Usa a cor escura da logo
   }
 
   p {
-    font-size: 16px;
-    color: #718096;
-    margin: 0;
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    margin-top: 0.25rem;
   }
 }
 
+/* 5. Formulário e Inputs */
 .login-form {
-  .form-group {
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 
+  .form-group {
+    text-align: left;
+    
     label {
       display: block;
-      font-size: 14px;
-      font-weight: 600;
-      color: #4a5568;
-      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #555;
     }
 
     input {
       width: 100%;
-      padding: 12px 16px;
-      border: 2px solid #e2e8f0;
+      padding: 0.9rem 1rem;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      font-size: 14px;
-      transition: all 0.3s;
       box-sizing: border-box;
+      font-size: 1rem;
 
+      // Efeito de "focus" com a cor da logo
       &:focus {
         outline: none;
-        border-color: #667eea;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        border-color: var(--cor-clara-logo);
+        box-shadow: 0 0 0 3px rgba(51, 204, 166, 0.2);
       }
-
-      &:disabled {
-        background: #f7fafc;
-        cursor: not-allowed;
-      }
-    }
-  }
-
-  .error-message {
-    background: #fed7d7;
-    color: #c53030;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .btn-login {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    &:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
     }
   }
 }
 
-.demo-credentials {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 2px solid #e2e8f0;
+/* 6. Botão "Entrar" (Substituindo o roxo) */
+.btn-login {
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  // === A MUDANÇA ESTÁ AQUI ===
+  background: linear-gradient(90deg, var(--cor-clara-logo), var(--cor-escura-logo));
+  color: var(--cor-texto-claro); // Texto branco
+  background-size: 200% auto; // Para o efeito de hover
 
-  p {
-    font-size: 14px;
-    color: #4a5568;
-    margin: 0 0 12px 0;
+  &:hover {
+    background-position: right center; // Efeito de mudança no hover
+    box-shadow: 0 4px 15px rgba(51, 204, 166, 0.3);
+  }
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+/* 7. Mensagem de Erro */
+.error-message {
+  color: #D32F2F;
+  background: #FFEBEE;
+  border: 1px solid #FFCDD2;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* 8. Credenciais de Demonstração (Substituindo o azul) */
+.demo-credentials {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+
+  p strong {
+    color: var(--cor-texto-escuro);
   }
 
   .credential-item {
-    background: #f7fafc;
-    padding: 8px 12px;
+    background: #f9f9f9;
+    padding: 0.75rem;
     border-radius: 6px;
-    font-size: 13px;
-    color: #2d3748;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    border: 1px solid #eee;
 
     strong {
-      color: #667eea;
+      // === A MUDANÇA ESTÁ AQUI ===
+      color: var(--cor-escura-logo); // Usa a cor escura da logo
+      font-weight: 600;
     }
   }
 }

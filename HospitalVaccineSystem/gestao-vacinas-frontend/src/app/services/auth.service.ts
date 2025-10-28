@@ -34,6 +34,15 @@ export class AuthService {
       perfil: 'administrador',
       ativo: true,
       dataCadastro: new Date('2024-01-01')
+    },
+    // NOVO USUÁRIO ADICIONADO
+    {
+      id: 4,
+      nome: 'Carlos Paciente',
+      email: 'paciente@hospital.com',
+      perfil: 'paciente',
+      ativo: true,
+      dataCadastro: new Date('2024-03-01')
     }
   ];
 
@@ -51,7 +60,8 @@ export class AuthService {
 
   login(credentials: LoginRequest): Observable<LoginResponse> {
     const user = this.mockUsers.find(u => u.email === credentials.email);
-    
+
+    // Use a senha '123456' para todos os mocks
     if (!user || credentials.senha !== '123456') {
       return throwError(() => new Error('Email ou senha inválidos')).pipe(delay(500));
     }

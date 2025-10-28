@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  --cor-primaria: #33cca6;     
+  --cor-secundaria: #1a3b4f;  
+  
+  --cor-fundo-app: #f4f7f6;  
+  --cor-card: #ffffff;
+  --cor-texto: #333;
+  --cor-texto-claro: #ffffff;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--cor-fundo-app);
+  color: var(--cor-texto);
+}
+
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-flat-button.mat-primary {
+  background-color: var(--cor-primaria) !important;
+  color: var(--cor-texto-claro) !important;
+}
+
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: var(--cor-primaria) !important;
+  border-width: 3px !important;
+}
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: var(--cor-primaria) !important;
+}
+.mat-mdc-tab-focus-indicator {
+  background-color: var(--cor-primaria) !important;
+}
+.mat-ripple-element {
+  background-color: rgba(51, 204, 166, 0.2) !important;
+}

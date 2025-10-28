@@ -1,77 +1,94 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Importe CommonModule
+import { RouterModule } from '@angular/router';   // Importe RouterModule
 import { User } from '../../models/user.model';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-layout',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
+  standalone: true, // Adicionado 'standalone: true'
+  imports: [
+    CommonModule,   // Adicionado 'imports'
+    RouterModule
+  ],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  currentUser: User | null = null;
-  menuItems: any[] = [];
-  sidebarCollapsed = false;
+
+  // === 1. VARIÁVEL ADICIONADA ===
+  // Controla o estado (aberta/fechada)
+  public sidebarCollapsed = false;
+  
+  public currentUser: User | null;
+  public menuItems: any[] = [];
 
   constructor(
     private authService: AuthService,
     private router: Router
-  ) {}
-
-  ngOnInit(): void {
-    this.authService.currentUser.subscribe(user => {
-      this.currentUser = user;
-      this.updateMenuItems();
-    });
+  ) {
+    this.currentUser = this.authService.currentUserValue;
   }
 
-  updateMenuItems(): void {
-    if (!this.currentUser) return;
+  ngOnInit(): void {
+    // Define os itens do menu baseados no perfil do usuário
+    this.setMenuItems();
+  }
 
-    const perfil = this.currentUser.perfil;
+  /**
+   * Define os itens de menu com base no perfil do usuário logado.
+   */
+  setMenuItems(): void {
+    const perfil = this.currentUser?.perfil;
 
-    if (perfil === 'enfermeiro') {
+    if (perfil === 'administrador') {
       this.menuItems = [
-        { label: 'Dashboard', icon: 'dashboard', route: '/enfermeiro' },
-        { label: 'Solicitar Vacinas', icon: 'add', route: '/enfermeiro/solicitar' },
-        { label: 'Minhas Solicitações', icon: 'list', route: '/enfermeiro/solicitacoes' }
+        { route: '/administrador', icon: 'dashboard', label: 'Dashboard' },
+        { route: '/administrador/relatorios', icon: 'assessment', label: 'Relatórios' },
+        { route: '/administrador/funcionarios', icon: 'groups', label: 'Funcionários' },
+        { route: '/administrador/estoque', icon: 'inventory_2', label: 'Estoque Geral' },
+      ];
+    } else if (perfil === 'enfermeiro') {
+      this.menuItems = [
+        // Adicione os links do enfermeiro aqui
+        { route: '/enfermeiro', icon: 'dashboard', label: 'Dashboard' },
       ];
     } else if (perfil === 'farmaceutico') {
       this.menuItems = [
-        { label: 'Dashboard', icon: 'dashboard', route: '/farmaceutico' },
-        { label: 'Aprovar Solicitações', icon: 'check', route: '/farmaceutico/aprovar' },
-        { label: 'Gerenciar Lotes', icon: 'inventory', route: '/farmaceutico/lotes' },
-        { label: 'Estoque', icon: 'storage', route: '/farmaceutico/estoque' }
+        // Adicione os links do farmaceutico aqui
+        { route: '/farmaceutico', icon: 'dashboard', label: 'Dashboard' },
       ];
-    } else if (perfil === 'administrador') {
+    } else if (perfil === 'paciente') {
       this.menuItems = [
-        { label: 'Dashboard', icon: 'dashboard', route: '/administrador' },
-        { label: 'Relatórios', icon: 'assessment', route: '/administrador/relatorios' },
-        { label: 'Funcionários', icon: 'people', route: '/administrador/funcionarios' },
-        { label: 'Estoque Geral', icon: 'storage', route: '/administrador/estoque' }
+        // O paciente não tem menu na sidebar (por enquanto)
+        { route: '/paciente', icon: 'person', label: 'Minha Área' },
       ];
     }
   }
 
-  toggleSidebar(): void {
-    this.sidebarCollapsed = !this.sidebarCollapsed;
+  /**
+   * Retorna o nome do perfil formatado.
+   */
+  getPerfilLabel(): string {
+    const perfil = this.currentUser?.perfil;
+    if (!perfil) return 'Usuário';
+    
+    // Deixa a primeira letra maiúscula
+    return perfil.charAt(0).toUpperCase() + perfil.slice(1);
   }
 
+  /**
+   * Desloga o usuário e o redireciona para a tela de login.
+   */
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
 
-  getPerfilLabel(): string {
-    if (!this.currentUser) return '';
-    const perfis: any = {
-      'enfermeiro': 'Enfermeiro(a)',
-      'farmaceutico': 'Farmacêutico(a)',
-      'administrador': 'Administrador(a)'
-    };
-    return perfis[this.currentUser.perfil] || '';
+  // === 2. FUNÇÃO ADICIONADA ===
+  // Esta é a função que o (click)="toggleSidebar()" chama
+  public toggleSidebar(): void {
+    this.sidebarCollapsed = !this.sidebarCollapsed;
   }
 }

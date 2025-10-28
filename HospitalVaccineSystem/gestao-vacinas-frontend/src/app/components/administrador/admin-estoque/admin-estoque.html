@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h2>Estoque Geral de Vacinas</h2>
+</div>
+
+<div class="card">
+  <div class="table-container">
+    <table *ngIf="estoque.length > 0; else semEstoque">
+      <thead>
+        <tr>
+          <th>Vacina</th>
+          <th>Quantidade Total</th>
+          <th>Lotes Disponíveis</th>
+          <th>Próximos ao Vencimento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of estoque">
+          <td>{{ item.vacinaNome }}</td>
+          <td>{{ item.quantidadeTotal }}</td>
+          <td>{{ item.lotesDisponiveis }}</td>
+          <td>
+            <span *ngIf="item.lotesProximosVencimento > 0" class="alert-badge">
+              {{ item.lotesProximosVencimento }}
+            </span>
+            <span *ngIf="item.lotesProximosVencimento === 0">-</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #semEstoque>
+      <div class="empty-state">
+        <span class="material-icons">inbox</span>
+        <p>Nenhum estoque disponível</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

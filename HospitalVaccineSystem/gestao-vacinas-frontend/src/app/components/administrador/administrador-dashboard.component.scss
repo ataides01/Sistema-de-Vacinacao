@@ -1,95 +1,61 @@
-@import '../../../styles.scss';
-@import '../enfermeiro/enfermeiro-dashboard.component.scss';
-@import '../farmaceutico/farmaceutico-dashboard.component.scss';
 
-.relatorios-grid {
+@use '../../../styles.scss';
+@use '../enfermeiro/enfermeiro-dashboard.component.scss';
+@use '../farmaceutico/farmaceutico-dashboard.component.scss';
+
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
-.relatorio-card {
-  padding: 24px;
-  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: center;
+.stat-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .material-icons {
-    font-size: 48px;
-    color: #667eea;
-    margin-bottom: 12px;
+    color: #fff;
+    font-size: 32px;
   }
 
-  h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1f2937;
-    margin: 0 0 8px 0;
-  }
+  &.blue { background: #3b82f6; }
+  &.green { background: #10b981; }
+  &.purple { background: #8b5cf6; }
+}
 
-  p {
-    font-size: 14px;
+.stat-content {
+  .stat-label {
+    font-size: 1rem;
     color: #6b7280;
+    margin-bottom: 0.25rem;
+  }
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+  }
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  h1 {
     margin: 0;
-  }
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-color: #667eea;
-  }
-}
-
-.badge-perfil {
-  display: inline-block;
-  padding: 4px 12px;
-  background: #dbeafe;
-  color: #1e40af;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.status-ativo {
-  background: #d1fae5;
-  color: #065f46;
-}
-
-.status-inativo {
-  background: #fee2e2;
-  color: #991b1b;
-}
-
-.alert-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  background: #fef3c7;
-  color: #92400e;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.btn-action.btn-success {
-  background: #d1fae5;
-  color: #065f46;
-  padding: 6px 16px;
-
-  &:hover {
-    background: #a7f3d0;
-  }
-}
-
-.btn-action.btn-danger {
-  background: #fee2e2;
-  color: #991b1b;
-  padding: 6px 16px;
-
-  &:hover {
-    background: #fecaca;
   }
 }

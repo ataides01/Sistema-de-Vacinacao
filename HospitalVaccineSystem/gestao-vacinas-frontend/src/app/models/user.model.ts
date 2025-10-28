@@ -2,8 +2,7 @@ export interface User {
   id: number;
   nome: string;
   email: string;
-  perfil: 'enfermeiro' | 'farmaceutico' | 'administrador';
-  ativo: boolean;
+  perfil: 'enfermeiro' | 'farmaceutico' | 'administrador' | 'paciente';  ativo: boolean;
   dataCadastro: Date;
 }
 

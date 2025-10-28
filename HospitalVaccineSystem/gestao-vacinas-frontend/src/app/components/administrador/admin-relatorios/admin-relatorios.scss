@@ -1,0 +1,47 @@
+
+@use '../../../../styles.scss';
+
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.relatorios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.relatorio-card {
+  padding: 24px;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+
+  .material-icons {
+    font-size: 48px;
+    color: #667eea;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 8px 0;
+  }
+
+  p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+  }
+}

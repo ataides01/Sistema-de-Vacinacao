@@ -1,0 +1,14 @@
+<div class="feature-content alert-list">
+  <h3>Alertas e Campanhas</h3>
+  
+  <mat-card *ngFor="let alerta of mockAlertas" class="alert-card" [ngClass]="alerta.tipo">
+    <mat-card-header>
+      <mat-icon mat-card-avatar [ngClass]="alerta.tipo">{{ getIcone(alerta.tipo) }}</mat-icon>
+      <mat-card-title>{{ alerta.titulo }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ alerta.mensagem }}</p>
+    </mat-card-content>
+  </mat-card>
+
+</div>

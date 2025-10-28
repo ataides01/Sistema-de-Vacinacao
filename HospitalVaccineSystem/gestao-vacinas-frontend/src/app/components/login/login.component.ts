@@ -33,13 +33,17 @@ export class LoginComponent {
       next: (response) => {
         this.loading = false;
         const perfil = response.user.perfil;
-        
+
         if (perfil === 'enfermeiro') {
           this.router.navigate(['/enfermeiro']);
         } else if (perfil === 'farmaceutico') {
           this.router.navigate(['/farmaceutico']);
         } else if (perfil === 'administrador') {
           this.router.navigate(['/administrador']);
+        } 
+        
+        else if (perfil === 'paciente') {
+          this.router.navigate(['/paciente']); 
         }
       },
       error: (err) => {

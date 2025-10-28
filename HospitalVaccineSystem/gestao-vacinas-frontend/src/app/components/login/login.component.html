@@ -1,14 +1,13 @@
 <div class="login-container">
   <div class="login-card">
     <div class="login-header">
-      <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-        </svg>
-      </div>
-      <h1>Sistema de Gestão de Vacinas</h1>
-      <p>Hospital Municipal</p>
-    </div>
+  <img
+    class="logo-imagem"
+    src="assets/easyvacc.png" 
+    alt="Logo EasyVacc">
+  <h1>Sistema de Gestão de Vacinas</h1>
+  <p>Hospital Municipal</p>
+</div>
 
     <form (ngSubmit)="login()" class="login-form">
       <div class="form-group">
@@ -49,14 +48,21 @@
 
     <div class="demo-credentials">
       <p><strong>Credenciais de demonstração:</strong></p>
+      
       <div class="credential-item">
         <strong>Enfermeiro:</strong> enfermeiro@hospital.com / 123456
       </div>
+      
       <div class="credential-item">
         <strong>Farmacêutico:</strong> farmaceutico@hospital.com / 123456
       </div>
+      
       <div class="credential-item">
         <strong>Administrador:</strong> admin@hospital.com / 123456
+      </div>
+      
+      <div class="credential-item">
+        <strong>Paciente:</strong> paciente@hospital.com / 123456
       </div>
     </div>
   </div>

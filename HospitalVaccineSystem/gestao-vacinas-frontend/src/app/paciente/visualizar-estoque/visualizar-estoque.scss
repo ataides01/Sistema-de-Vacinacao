@@ -1,0 +1,33 @@
+.feature-content {
+  padding: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  flex-grow: 1; // Faz o campo de input ocupar o espaço
+}
+
+.search-results {
+  .info-text {
+    text-align: center;
+    color: #777;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+
+  .clinic-card {
+    margin-bottom: 1rem;
+  }
+  
+  mat-card-header {
+    .mat-icon {
+      font-size: 40px;
+    }
+  }
+}

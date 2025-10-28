@@ -1,0 +1,22 @@
+.feature-content {
+  padding: 1rem;
+}
+
+.guide-container {
+  margin-top: 1.5rem;
+  display: grid;
+  // Cria colunas de no mínimo 300px, que se ajustam automaticamente
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.guide-card {
+  .mat-icon[mat-card-avatar] {
+    font-size: 40px;
+  }
+  
+  // Card de "Urgente" com destaque
+  &.urgent {
+    .mat-icon { color: #f44336; } // Vermelho
+  }
+}
