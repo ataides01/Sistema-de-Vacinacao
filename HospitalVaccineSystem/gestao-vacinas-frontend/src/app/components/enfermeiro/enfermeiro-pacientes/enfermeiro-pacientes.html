@@ -1,0 +1,56 @@
+<div class="page-container">
+  <div class="page-header">
+    <h2>Buscar Paciente</h2>
+    <button class="btn-primary">
+      <span class="material-icons">person_add</span>
+      Cadastrar Novo Paciente
+    </button>
+  </div>
+
+  <div class="search-bar">
+    <span class="material-icons">search</span>
+    <input type="text" placeholder="Buscar por nome ou CPF..." (input)="buscarPaciente($event)">
+  </div>
+
+  <div class="card">
+    <div class="table-container">
+      <table *ngIf="!isLoading">
+        <thead>
+          <tr>
+            <th>Nome Completo</th>
+            <th>CPF</th>
+            <th>Data de Nasc.</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let paciente of pacientesExibidos">
+            <td>{{ paciente.nome }}</td>
+            <td>{{ paciente.cpf }}</td>
+            <td>{{ paciente.dataNascimento | date:'dd/MM/yyyy' }}</td>
+            <td>
+              <span class="status-badge" [class.status-ativo]="paciente.ativo" [class.status-inativo]="!paciente.ativo">
+                {{ paciente.ativo ? 'Ativo' : 'Inativo' }}
+              </span>
+            </td>
+            <td>
+              <button class="btn-action btn-primary-outline">
+                <span class="material-icons">vaccines</span>
+                Aplicar/Ver Carteira
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div *ngIf="isLoading" class="empty-state">
+        <p>Carregando pacientes...</p>
+      </div>
+
+      <div *ngIf="!isLoading && pacientesExibidos.length === 0" class="empty-state">
+        <p>Nenhum paciente encontrado.</p>
+      </div>
+    </div>
+  </div>
+</div>

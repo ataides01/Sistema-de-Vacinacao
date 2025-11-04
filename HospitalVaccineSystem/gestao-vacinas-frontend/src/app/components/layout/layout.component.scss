@@ -1,31 +1,27 @@
-/* Em: src/app/components/layout/layout.scss */
 
-/* Importa as variáveis globais */
-@import '../../../styles.scss';
+@use '../../../styles.scss';
 
-/* O container principal que segura a sidebar e o conteúdo */
 .layout-container {
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
 
-/* A sidebar da esquerda */
+
 .sidebar {
   width: 260px;
-  flex-shrink: 0; // Impede que a sidebar encolha
+  flex-shrink: 0;
   
-  /* === APLICANDO AS CORES DA LOGO === */
+  
   background: var(--cor-secundaria); 
   color: var(--cor-texto-claro);    
-  /* ================================== */
+  
 
   display: flex;
   flex-direction: column; 
   transition: width 0.3s ease;
 }
 
-/* O bloco de conteúdo principal à direita */
 .main-content {
   flex: 1; 
   display: flex;
@@ -33,11 +29,11 @@
   overflow: hidden; 
 }
 
-/* O cabeçalho (header) dentro do main-content */
+
 .header {
   height: 70px;
   flex-shrink: 0; 
-  background: var(--cor-card); // Fundo branco
+  background: var(--cor-card); 
   border-bottom: 1px solid #eee;
   display: flex;
   align-items: center;
@@ -46,15 +42,15 @@
   box-sizing: border-box; 
 }
 
-/* A área de conteúdo (onde o <router-outlet> está) */
+
 .content {
   flex: 1; 
   overflow-y: auto; 
   padding: 2rem;
-  background-color: var(--cor-fundo-app); // Fundo cinza claro
+  background-color: var(--cor-fundo-app); 
 }
 
-/* --- Estilos do Conteúdo da Sidebar --- */
+
 
 .sidebar-header {
   padding: 1.25rem 1.5rem;
@@ -68,10 +64,10 @@
     font-weight: 600;
   }
   
-  svg { // Estilo para o logo de "check"
+  svg {
     width: 32px;
     height: 32px;
-    fill: var(--cor-primaria); // <-- CORRIGIDO
+    fill: var(--cor-primaria); 
   }
 }
 
@@ -94,12 +90,12 @@
     background: rgba(255, 255, 255, 0.05);
   }
 
-  // Estilo da rota ativa
+  
   &.active {
     background: rgba(255, 255, 255, 0.1);
     color: var(--cor-texto-claro);
     font-weight: 500;
-    border-left-color: var(--cor-primaria); // <-- CORRIGIDO
+    border-left-color: var(--cor-primaria); 
   }
 }
 
@@ -126,7 +122,6 @@
   }
 }
 
-/* --- Estilos do Header e User --- */
 .header-right {
   display: flex;
   align-items: center;
@@ -141,7 +136,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--cor-primaria); // <-- CORRIGIDO
+    background: var(--cor-primaria); 
     color: var(--cor-texto-claro);
     display: flex;
     align-items: center;
@@ -156,7 +151,6 @@
   }
 }
 
-/* --- Estilos para o Toggle (que já funcionam) --- */
 .layout-container.sidebar-collapsed {
   
   .sidebar {

@@ -22,7 +22,7 @@ export class AdminEstoqueComponent implements OnInit {
   }
 
   loadData(): void {
-    this.vacinaService.getEstoque().subscribe(estoque => {
+    this.vacinaService.getEstoque().subscribe((estoque: EstoqueVacina[]) => {
       this.estoque = estoque;
     });
   }

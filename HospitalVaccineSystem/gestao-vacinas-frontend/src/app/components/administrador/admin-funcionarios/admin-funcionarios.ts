@@ -31,7 +31,7 @@ export class AdminFuncionariosComponent implements OnInit {
   }
 
   loadData(): void {
-    this.usuarioService.getUsuarios().subscribe(users => {
+    this.usuarioService.getUsuarios().subscribe((users: User[]) => {
       this.usuarios = users;
     });
   }

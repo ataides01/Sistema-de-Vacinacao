@@ -1,44 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Importe CommonModule
-import { RouterModule } from '@angular/router';   // Importe RouterModule
-import { User } from '../../models/user.model';
 import { AuthService } from '../../services/auth.service';
+import { User } from '../../models/user.model';
+// Imports que seu HTML precisa (presumidos)
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
-  standalone: true, // Adicionado 'standalone: true'
-  imports: [
-    CommonModule,   // Adicionado 'imports'
-    RouterModule
-  ],
+  standalone: true,
+  // Adicione CommonModule e RouterModule aos imports
+  imports: [ CommonModule, RouterModule ],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
 
-  // === 1. VARIÁVEL ADICIONADA ===
-  // Controla o estado (aberta/fechada)
   public sidebarCollapsed = false;
-  
-  public currentUser: User | null;
-  public menuItems: any[] = [];
+  currentUser: User | null;
+  menuItems: any[] = [];
 
   constructor(
-    private authService: AuthService,
+    private authService: AuthService, 
     private router: Router
   ) {
     this.currentUser = this.authService.currentUserValue;
   }
 
   ngOnInit(): void {
-    // Define os itens do menu baseados no perfil do usuário
     this.setMenuItems();
   }
 
-  /**
-   * Define os itens de menu com base no perfil do usuário logado.
-   */
   setMenuItems(): void {
     const perfil = this.currentUser?.perfil;
 
@@ -47,47 +39,50 @@ export class LayoutComponent implements OnInit {
         { route: '/administrador', icon: 'dashboard', label: 'Dashboard' },
         { route: '/administrador/relatorios', icon: 'assessment', label: 'Relatórios' },
         { route: '/administrador/funcionarios', icon: 'groups', label: 'Funcionários' },
+        // ===== ADICIONE ESTA LINHA PARA O ADMIN =====
+        { route: '/administrador/pacientes', icon: 'people_outline', label: 'Pacientes' },
+        // =============================================
         { route: '/administrador/estoque', icon: 'inventory_2', label: 'Estoque Geral' },
       ];
     } else if (perfil === 'enfermeiro') {
       this.menuItems = [
-        // Adicione os links do enfermeiro aqui
         { route: '/enfermeiro', icon: 'dashboard', label: 'Dashboard' },
+        // ===== ADICIONE ESTA LINHA PARA O ENFERMEIRO =====
+        { route: '/enfermeiro/pacientes', icon: 'people_outline', label: 'Pacientes' },
+        // =================================================
+        // (Aqui você pode adicionar as outras rotas do enfermeiro)
+        // { route: '/enfermeiro/solicitar', icon: 'add_circle', label: 'Solicitar Vacina' },
+        // { route: '/enfermeiro/solicitacoes', icon: 'list_alt', label: 'Minhas Solicitações' },
       ];
     } else if (perfil === 'farmaceutico') {
       this.menuItems = [
-        // Adicione os links do farmaceutico aqui
+        // (Menu do Farmacêutico aqui)
         { route: '/farmaceutico', icon: 'dashboard', label: 'Dashboard' },
       ];
     } else if (perfil === 'paciente') {
       this.menuItems = [
-        // O paciente não tem menu na sidebar (por enquanto)
-        { route: '/paciente', icon: 'person', label: 'Minha Área' },
+        // (Menu do Paciente aqui)
+        { route: '/paciente', icon: 'dashboard', label: 'Minhas Vacinas' },
       ];
     }
   }
 
-  /**
-   * Retorna o nome do perfil formatado.
-   */
+  // Função que seu HTML do layout precisa
   getPerfilLabel(): string {
-    const perfil = this.currentUser?.perfil;
-    if (!perfil) return 'Usuário';
-    
-    // Deixa a primeira letra maiúscula
-    return perfil.charAt(0).toUpperCase() + perfil.slice(1);
+    const perfis: any = {
+      'enfermeiro': 'Enfermeiro(a)',
+      'farmaceutico': 'Farmacêutico(a)',
+      'administrador': 'Administrador(a)',
+      'paciente': 'Paciente'
+    };
+    return perfis[this.currentUser?.perfil || ''] || 'Usuário';
   }
 
-  /**
-   * Desloga o usuário e o redireciona para a tela de login.
-   */
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
 
-  // === 2. FUNÇÃO ADICIONADA ===
-  // Esta é a função que o (click)="toggleSidebar()" chama
   public toggleSidebar(): void {
     this.sidebarCollapsed = !this.sidebarCollapsed;
   }
