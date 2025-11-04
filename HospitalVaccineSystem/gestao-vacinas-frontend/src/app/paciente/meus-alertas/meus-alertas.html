@@ -1,14 +1,49 @@
-<div class="feature-content alert-list">
-  <h3>Alertas e Campanhas</h3>
+<div class="feature-content">
   
-  <mat-card *ngFor="let alerta of mockAlertas" class="alert-card" [ngClass]="alerta.tipo">
+  <h3>Alertas e Campanhas</h3>
+  <div class="alert-list">
+    <mat-card *ngFor="let alerta of mockAlertas" class="alert-card" [ngClass]="alerta.tipo">
+      <mat-card-header>
+        <mat-icon mat-card-avatar [ngClass]="alerta.tipo">{{ getIcone(alerta.tipo) }}</mat-icon>
+        <mat-card-title>{{ alerta.titulo }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ alerta.mensagem }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card class="preference-card">
     <mat-card-header>
-      <mat-icon mat-card-avatar [ngClass]="alerta.tipo">{{ getIcone(alerta.tipo) }}</mat-icon>
-      <mat-card-title>{{ alerta.titulo }}</mat-card-title>
+      <mat-card-title>Configurar Notificações</mat-card-title>
+      <mat-card-subtitle>Escolha como você quer receber alertas e atualizações</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>
-      <p>{{ alerta.mensagem }}</p>
+
+    <mat-card-content class="preference-toggles">
+      
+      <mat-slide-toggle
+        [(ngModel)]="notificarEmail"
+        color="primary">
+        Receber notificações por E-mail
+      </mat-slide-toggle>
+
+      <mat-slide-toggle
+        [(ngModel)]="notificarSms"
+        color="primary">
+        Receber notificações por SMS
+      </mat-slide-toggle>
+
     </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button 
+        mat-flat-button 
+        color="primary" 
+        (click)="salvarPreferencias()" 
+        [disabled]="isSaving">
+        {{ isSaving ? 'Salvando...' : 'Salvar Preferências' }}
+      </button>
+    </mat-card-actions>
   </mat-card>
 
 </div>

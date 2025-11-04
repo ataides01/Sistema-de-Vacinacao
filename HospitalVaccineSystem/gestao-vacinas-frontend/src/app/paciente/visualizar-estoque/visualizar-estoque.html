@@ -18,7 +18,7 @@
     </div>
 
     <div *ngIf="buscaRealizada && clinicasEncontradas.length === 0" class="info-text">
-      <p>Nenhum posto encontrado para o termo "<strong>{{ searchTerm }}</strong>".</p>
+      <p>Nenhum posto encontrado para o termo<strong>{{ searchTerm }}</strong>".</p>
     </div>
 
     <mat-card *ngFor="let clinica of clinicasEncontradas" class="clinic-card">

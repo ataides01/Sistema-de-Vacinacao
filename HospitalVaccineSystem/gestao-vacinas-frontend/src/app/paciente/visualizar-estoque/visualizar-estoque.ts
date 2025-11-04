@@ -29,9 +29,9 @@ export class VisualizarEstoqueComponent {
 
  
   private mockClinicas = [
-    { nome: 'Posto de Saúde Central', endereco: 'Rua das Flores, 123', vacinas: ['Gripe', 'COVID-19 (Reforço)', 'Febre Amarela'] },
-    { nome: 'Clínica Proteger', endereco: 'Av. das Américas, 500', vacinas: ['Gripe', 'Hepatite B'] },
-    { nome: 'UBS Bairro Novo', endereco: 'Rua dos Pescadores, 78', vacinas: ['COVID-19 (Reforço)', 'Sarampo'] }
+    { nome: 'P.U Saquarema', endereco: 'R. Cel. Madureira, 113', vacinas: ['Gripe', 'COVID-19 (Reforço)', 'Febre Amarela'] },
+    { nome: 'ESF Bacaxá', endereco: 'R. Alfredo Menezes, 980', vacinas: ['Gripe', 'Hepatite B'] },
+    { nome: 'ESF Barreira', endereco: 'R. Cap. Nunes, 2605', vacinas: ['COVID-19 (Reforço)', 'Sarampo'] }
   ];
 
   constructor() { }
