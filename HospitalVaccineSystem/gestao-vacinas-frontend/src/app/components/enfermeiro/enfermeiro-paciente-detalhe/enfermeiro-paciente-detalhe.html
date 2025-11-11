@@ -1,0 +1,79 @@
+<div *ngIf="!(paciente$ | async) as paciente; else content" class="loading-spinner">
+  <mat-spinner></mat-spinner>
+  <p>Carregando dados do paciente...</p>
+</div>
+
+<ng-template #content>
+  <div *ngIf="paciente$ | async as paciente" class="page-container">
+
+    <div class="page-header">
+      <a routerLink="/enfermeiro/pacientes" class="btn-back">
+        <span class="material-icons">arrow_back</span>
+        Voltar para lista
+      </a>
+    </div>
+
+    <mat-card class="info-card">
+      <mat-card-header>
+        <mat-card-title>{{ paciente.nome }}</mat-card-title>
+        <mat-card-subtitle>Carteira de Vacinação Digital</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="info-grid">
+        <div>
+          <span class="label">CPF</span>
+          <span>{{ paciente.cpf }}</span>
+        </div>
+        <div>
+          <span class="label">Data de Nasc.</span>
+          <span>{{ paciente.dataNascimento | date:'dd/MM/yyyy' }}</span>
+        </div>
+        <div>
+          <span class="label">Email</span>
+          <span>{{ paciente.email }}</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="historico-card">
+      <mat-card-header>
+        <mat-card-title>Histórico Vacinal</mat-card-title>
+        
+        <button mat-flat-button color="primary" class="btn-aplicar" (click)="abrirModalAplicacao()">
+          <span class="material-icons">vaccines</span>
+          Adicionar Nova Aplicação
+        </button>
+      </mat-card-header>
+      
+      <mat-card-content class="table-container">
+        <table *ngIf="paciente.historico.length > 0; else semHistorico">
+          <thead>
+            <tr>
+              <th>Vacina</th>
+              <th>Dose</th>
+              <th>Data Aplicação</th>
+              <th>Lote</th>
+              <th>Aplicada por</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let vacina of paciente.historico">
+              <td>{{ vacina.nomeVacina }}</td>
+              <td>{{ vacina.dose }}</td>
+              <td>{{ vacina.dataAplicacao | date:'dd/MM/yyyy' }}</td>
+              <td>{{ vacina.lote }}</td>
+              <td>{{ vacina.profissional }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ng-template #semHistorico>
+          <div class="empty-state">
+            <span class="material-icons">inbox</span>
+            <p>Nenhuma vacina registrada no histórico deste paciente.</p>
+          </div>
+        </ng-template>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</ng-template>

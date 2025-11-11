@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>Registrar Nova Aplicação</h2>
+<p>Paciente: <strong>{{ data.pacienteNome }}</strong></p>
+
+<form (ngSubmit)="salvarAplicacao()">
+  <div mat-dialog-content>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Vacina Aplicada</mat-label>
+      <mat-select [(ngModel)]="aplicacao.vacinaNome" name="vacinaNome" required>
+        <mat-option *ngFor="let vacina of vacinasDisponiveis" [value]="vacina">
+          {{ vacina }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Dose (ex: 1ª Dose, Reforço)</mat-label>
+      <input matInput [(ngModel)]="aplicacao.dose" name="dose" required>
+    </mat-form-field>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field-half">
+        <mat-label>Data da Aplicação</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="aplicacao.dataAplicacao" name="dataAplicacao" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field-half">
+        <mat-label>Lote</mat-label>
+        <input matInput [(ngModel)]="aplicacao.lote" name="lote" required>
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button type="button" (click)="fechar()" [disabled]="isSaving">Cancelar</button>
+    <button mat-flat-button color="primary" type="submit" [disabled]="isSaving">
+      {{ isSaving ? 'Salvando...' : 'Salvar Aplicação' }}
+    </button>
+  </div>
+</form>

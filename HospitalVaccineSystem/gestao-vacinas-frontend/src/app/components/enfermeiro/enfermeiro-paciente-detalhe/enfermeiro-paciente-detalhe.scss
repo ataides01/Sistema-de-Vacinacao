@@ -1,0 +1,101 @@
+@use '../../../../styles.scss';
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 5rem;
+  color: #777;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  &:hover {
+    color: var(--cor-primaria);
+  }
+}
+
+.info-card {
+  margin-bottom: 2rem;
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding-top: 1rem;
+    
+    .label {
+      display: block;
+      font-size: 0.8rem;
+      color: #777;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+.historico-card {
+  
+  mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem; 
+    box-sizing: border-box; 
+  }
+
+  .btn-aplicar {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+
+  mat-card-content {
+    padding: 0 !important;
+  }
+}
+
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+  th, td {
+    
+    padding: 1rem 1.5rem; 
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+  }
+  
+  th {
+    background-color: #f9fafb;
+    font-weight: 600;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #6b7280;
+  
+  .material-icons {
+    font-size: 48px;
+  }
+}

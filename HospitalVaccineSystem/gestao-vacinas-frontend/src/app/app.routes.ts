@@ -2,27 +2,28 @@
 
 import { Routes } from '@angular/router';
 
-// COMPONENTES PRINCIPAIS (Estes usam .component)
+// COMPONENTES PRINCIPAIS
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { authGuard } from './guards/auth.guard';
 import { roleGuard } from './guards/role.guard';
+
+// DASHBOARDS
 import { EnfermeiroDashboardComponent } from './components/enfermeiro/enfermeiro-dashboard.component';
 import { FarmaceuticoDashboardComponent } from './components/farmaceutico/farmaceutico-dashboard.component';
 import { AdministradorDashboardComponent } from './components/administrador/administrador-dashboard.component';
-
-// COMPONENTES DO PACIENTE (Estes NÃO usam .component)
 import { DashboardComponent as PacienteDashboardComponent } from './paciente/dashboard/dashboard';
 
-// COMPONENTES REATORADOS DO ADMIN (Estes NÃO usam .component)
+// COMPONENTES ADMIN
 import { AdminRelatoriosComponent } from './components/administrador/admin-relatorios/admin-relatorios';
 import { AdminFuncionariosComponent } from './components/administrador/admin-funcionarios/admin-funcionarios';
 import { AdminEstoqueComponent } from './components/administrador/admin-estoque/admin-estoque';
-
-// ===== CORREÇÃO: NOVOS COMPONENTES (Estes SIM usam .component) =====
 import { AdminPacientesComponent } from './components/administrador/admin-pacientes/admin-pacientes';
+
+// COMPONENTES ENFERMEIRO
 import { EnfermeiroPacientesComponent } from './components/enfermeiro/enfermeiro-pacientes/enfermeiro-pacientes';
-// ====================================================================
+
+import { EnfermeiroPacienteDetalheComponent } from './components/enfermeiro/enfermeiro-paciente-detalhe/enfermeiro-paciente-detalhe';
 
 
 export const routes: Routes = [
@@ -34,6 +35,7 @@ export const routes: Routes = [
     children: [
       { path: '', component: EnfermeiroDashboardComponent },
       { path: 'pacientes', component: EnfermeiroPacientesComponent },
+      { path: 'pacientes/:id', component: EnfermeiroPacienteDetalheComponent },
       { path: 'solicitar', component: EnfermeiroDashboardComponent },
       { path: 'solicitacoes', component: EnfermeiroDashboardComponent }
     ]
@@ -69,7 +71,6 @@ export const routes: Routes = [
       { path: '', component: PacienteDashboardComponent }
     ]
   },
-  // ROTAS PADRÃO
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', redirectTo: '/login' }
 ];

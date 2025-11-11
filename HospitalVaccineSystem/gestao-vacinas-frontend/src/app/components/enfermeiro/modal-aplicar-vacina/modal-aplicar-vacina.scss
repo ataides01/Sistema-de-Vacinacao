@@ -1,0 +1,20 @@
+/* Estiliza o formulário dentro do modal */
+
+[mat-dialog-content] {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-field-half {
+  flex: 1;
+}
+
+mat-form-field {
+  width: 100%;
+}
